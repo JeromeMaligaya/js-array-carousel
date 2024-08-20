@@ -14,25 +14,35 @@ img{
     width: 100%;
     display: block;
 }
-
-a{
-    display: block;
-    text-decoration: none;
-}
-
-ul{
-    list-style-type: none;
-}
-
 /*layout*/
 .container{
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 /*color*/
 
-
 /*bg*/
 
 /*utilities*/
+
+/* carousel */
+#carousel{
+    height: 500px;
+    margin-top: 100px;
+}
+
+#gallery{
+    height:100%
+}
+
+#carousel img{
+    display: none;
+    height: 100%;
+}
+
+#carousel img.active{
+    display: block;
+}
+
+
