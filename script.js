@@ -50,7 +50,7 @@ nextButton.addEventListener('click', function(){
     // incremento indice
     currentActive++;
 
-    // creo una condizione per controllare se sono uscito dall'array e per creare un loop
+    // creo una condizione per controllare se sono uscito dall'array con nextButton e per creare un loop
     if(currentActive === imagesIndex.length){
         currentActive = 0;
     }
@@ -58,6 +58,26 @@ nextButton.addEventListener('click', function(){
     // aggiungo la classe active alla img successiva
     imagesIndex[currentActive].classList.add('active');
     console.log('img re-add active at nextBtn',imagesIndex[currentActive],'currentActive', currentActive);
+
+})
+
+// creo evento al click di prevButton
+prevButton.addEventListener('click', function(){
+    // rimuovo la classe active alla img corrente
+    imagesIndex[currentActive].classList.remove('active');
+    console.log('img remove active at prevBtn',imagesIndex[currentActive],'currentActive', currentActive);
+
+    // decremento indice
+    currentActive--;
+
+    // creo una condizione per controllare se sono uscito dall'array con prevButton e per creare un loop inverso
+    if(currentActive < 0){
+        currentActive = imagesIndex.length - 1;
+    }
+
+    // aggiungo la classe active alla img successiva
+    imagesIndex[currentActive].classList.add('active');
+    console.log('img re-add active at prevBtn',imagesIndex[currentActive],'currentActive', currentActive);
 
 })
 
