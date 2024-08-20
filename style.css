@@ -1,0 +1,38 @@
+/*css-reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*generics*/
+body{
+    font-family: sans-serif;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*layout*/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*color*/
+
+
+/*bg*/
+
+/*utilities*/
