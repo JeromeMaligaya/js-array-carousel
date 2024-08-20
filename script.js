@@ -38,8 +38,28 @@ console.log('imagesIndex' , imagesIndex);
 // creo una variabile da concatenare, che farà apparire la img desiderata tramite una classe presente nel css (active)
 let currentActive = 0;
 imagesIndex[currentActive].classList.add('active');
-console.log('imagesIndex[currentActive]',imagesIndex[currentActive]);
+console.log('imagesIndex[currentActive]',imagesIndex[currentActive],'currentActive', currentActive);
+console.log('imagesIndex.length',imagesIndex.length);
 
+// creo evento al click di nextButton
+nextButton.addEventListener('click', function(){
+    // rimuovo la classe active alla img corrente
+    imagesIndex[currentActive].classList.remove('active');
+    console.log('img remove active at nextBtn',imagesIndex[currentActive],'currentActive', currentActive);
+
+    // incremento indice
+    currentActive++;
+
+    // creo una condizione per controllare se sono uscito dall'array e per creare un loop
+    if(currentActive === imagesIndex.length){
+        currentActive = 0;
+    }
+
+    // aggiungo la classe active alla img successiva
+    imagesIndex[currentActive].classList.add('active');
+    console.log('img re-add active at nextBtn',imagesIndex[currentActive],'currentActive', currentActive);
+
+})
 
 
 
